@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -18,3 +20,15 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export class Article {
+ title: string;
+ link: string;
+ votes: number;
+
+ constructor(title: string, link: string, votes?: number) {
+ this.title = title;
+ this.link = link;
+ this.votes = votes || 0;
+ }
+ }

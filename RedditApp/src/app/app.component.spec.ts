@@ -3,7 +3,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App: RedditApp', () => {
+describe('App: Angular2Reddit', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
