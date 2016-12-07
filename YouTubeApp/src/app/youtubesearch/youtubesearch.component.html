@@ -1,0 +1,25 @@
+<div class='container'>
+      <div class="page-header">  
+        <img src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRmVLxV07uiau2Gntgh2mZB7kBuVa0Ol5Dr-e836JP764vN4WdP' />
+        
+      <div class="row">
+        <div class="input-group input-group-lg col-md-12">
+          <app-search-box
+             (loading)="loading = $event"
+             (results)="updateResult($event)"
+              ></app-search-box>
+        </div>
+      </div>
+
+        <img *ngIf="loading" style="margin-top:50px;"
+            src='http://www.produce.gob.pe/ConsultasEnLinea/consultas.app//calculadora-virtual-interes/sources/img/gif_loading.gif' />
+
+      </div>
+
+      <div class="row">
+        <app-search-result
+          *ngFor="let result of results"
+          [result]="result">
+        </app-search-result>
+      </div>
+</div>
