@@ -1,0 +1,50 @@
+<!--<p>
+  product-row works!
+</p>-->
+
+<div class="container">
+
+
+ <div class="col-sm-1"></div>
+    <div class="col-sm-4 vline" >
+    
+   <app-product-image 
+ [product]="product">
+ </app-product-image>
+
+ </div>
+
+<div class="col-sm-5 ">
+ <div>
+
+ <div><h3>{{ product.name }}</h3></div> <br/><br/>
+ <div>SKU # {{ product.sku }}</div>
+ 
+ <div class="product-department">
+ <app-product-department 
+ [product]="product">
+ </app-product-department>
+ 
+ </div>
+
+ </div>
+</div>
+
+
+<div class="col-sm-2">
+<app-product-price 
+ [price]="product.price">
+ </app-product-price>  
+
+<app-add-to-cart 
+[product]="product"
+(onProductSelected)="productWasSelected($event)">
+</app-add-to-cart>
+
+</div>
+
+
+  </div>
+
+
+<!--(onProductSelected)="productWasSelected($event)">-->
